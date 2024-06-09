@@ -1,2 +1,0 @@
-!function(){var t={form:document.querySelector("#task-form"),listElem:document.querySelector("#task-list")};function e(t){var e={};return new FormData(t.currentTarget).forEach((function(t,r){e[r]=t})),e}var r={add:function(t){var e=JSON.parse(localStorage.getItem("key"))||[];e.push(t),localStorage.setItem("key",JSON.stringify(e))}};t.form.addEventListener("submit",(function(t){t.preventDefault();var a=e(t);r.add(a)}))}();
-//# sourceMappingURL=index.e1a8d10b.js.map

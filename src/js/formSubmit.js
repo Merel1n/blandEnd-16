@@ -1,7 +1,8 @@
+import { createData } from './createData';
+import { localStorageApi } from './localstorageApi';
+
 export function formSubmit(e) {
   e.preventDefault();
-  const data = {};
-  new FormData(e.currentTarget).forEach((value, key) => {
-    data[key] = value;
-  });
+  const data = createData(e);
+  localStorageApi.add(data);
 }

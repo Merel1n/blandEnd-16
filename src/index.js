@@ -16,4 +16,8 @@
  */
 import { refs } from './js/refs';
 import { formSubmit } from './js/formSubmit';
+import { renderCards } from './js/renderCards';
+import { deleteCard } from './js/deleteCard';
+renderCards();
 refs.form.addEventListener('submit', formSubmit);
+refs.listElem.addEventListener('click', deleteCard);

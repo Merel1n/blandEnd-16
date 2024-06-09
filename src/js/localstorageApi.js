@@ -3,5 +3,7 @@ function add(data) {
   dataArr.push(data);
   localStorage.setItem('key', JSON.stringify(dataArr));
 }
-
-export const localStorageApi = { add };
+function getAll() {
+  return JSON.parse(localStorage.getItem('key')) || [];
+}
+export const localStorageApi = { add, getAll };
